@@ -18,7 +18,7 @@
     <normaloff>icono.png</normaloff>icono.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnIngresar">
+   <widget class="QPushButton" name="btn_ing">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -31,7 +31,7 @@
      <string>Ingresar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnIngresar_2">
+   <widget class="QPushButton" name="btn_reg">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -70,7 +70,7 @@
      <string>Contraseña</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEditID">
+   <widget class="QTextEdit" name="txt_id">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -80,7 +80,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEditPassword">
+   <widget class="QTextEdit" name="txt_pass">
     <property name="geometry">
      <rect>
       <x>120</x>

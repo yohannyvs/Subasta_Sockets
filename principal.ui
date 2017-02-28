@@ -32,7 +32,7 @@
      <string>Buscar</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txt_buscar">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -42,7 +42,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_filtrar">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -55,7 +55,7 @@
      <string>Filtrar</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableView" name="tv">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -64,6 +64,15 @@
       <height>171</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::DoubleClicked|QAbstractItemView::SelectedClicked</set>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <attribute name="verticalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
@@ -83,7 +92,7 @@
      <string>Descripción</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="txt_desc">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -114,7 +123,7 @@
      <string>Oferta Actual</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="txt_oferta_act">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -123,11 +132,14 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
     <property name="readOnly">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="btn_oferta">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -135,6 +147,9 @@
       <width>151</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
     <property name="readOnly">
      <bool>false</bool>
@@ -158,7 +173,7 @@
      <string>Ofertar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btn_ofertar">
     <property name="geometry">
      <rect>
       <x>470</x>
