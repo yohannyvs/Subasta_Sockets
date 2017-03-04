@@ -18,7 +18,10 @@ class login(base, form):
         r.show()
 
     def ingresar(self):
-        pass
+        self.id = self.txt_id.text
+        self.cont = self.txt_pass.text
+
+        self.data = 'login,' + self.id + ',' + self.cont + ','
 
 
 

@@ -13,7 +13,11 @@ class registro(base, form):
         self.btn_registrar.clicled.connect(self.registrar_usuario)
 
     def registrar_usuario(self):
-        pass
+        self. nombre = self.txt_nom.text
+        self.user = self.txt_user.text
+        self.contr = self.txt_pass.text
+
+        data = 'reg,'+ self.nombre + ',' + self.user + ',' + self.contr + ','
 
 
 

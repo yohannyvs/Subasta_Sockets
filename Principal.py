@@ -19,6 +19,7 @@ class principal(base, form):
         self.btn_filtrar.clicked.connect(self.buscar)
         self.btn_ofertar.clicked.connect(self.ofertar)
         self.createTable()
+        self.txt_buscar.textChanged.connect(self.text_changed)
 
     def buscar(self, reg):
         pass
@@ -31,9 +32,13 @@ class principal(base, form):
         img.write(base64.b64decode(value))
         img.close()
 
+    def cargar_imagen(self, nombre):
+        self.img = QPixmap(nombre)
+        self.img = self.img.scaled(200, 140)
+        self.lbl_img_p.setPixmap(self.img)
 
-    #create table
-
+    def text_changed(self):
+        pass
 
     def createTable(self):
         self.my_array = [['00', '01', '02', '34'],

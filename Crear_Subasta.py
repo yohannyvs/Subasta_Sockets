@@ -4,6 +4,7 @@ import sys
 from PyQt4 import QtGui
 from PyQt4 import uic
 from PyQt4.QtGui import QFileDialog
+from PyQt4.QtGui import QPixmap
 from PyQt4.QtGui import QMessageBox
 
 base, form = uic.loadUiType('crear_subasta.ui')
@@ -22,21 +23,24 @@ class crear_subasta(base, form):
         if nombre_img:
             self.cargar_imagen(nombre_img)
             self.conv_img_base64(nombre_img)
-            QMessageBox.information(self, "", "Archivo Convertido con Exito")
+        #QMessageBox.information(self, "", "Archivo Convertido con Exito")
 
     def conv_img_base64(self, nombre):
         self.img64 = base64.b64encode(nombre)
         print self.img64
 
-    def cargar_imagen(self, value):
-        from PyQt4.QtGui import QPixmap
-        self.img = QPixmap(value)
+    def cargar_imagen(self, nombre):
+
+        self.img = QPixmap(nombre)
         self.img = self.img.scaled(260, 160)
         self.lbl_img.setPixmap(self.img)
-        #self.lbl_img.setFixedSize(self.img.width(), self.img.height())
 
     def subasta(self):
-        pass
+        self.nom = self.txt_nom_art.text
+        self.precio = self.txt_precio.text
+        self.tiempo = self.txt_tiempo.text
+
+        self.data = 'c_subasta,' + self.nom + ',' + self.precio + ',' + self.tiempo + ',' +self.img64 + ','
 
 
 application = PyQt4.QtGui.QApplication(sys.argv)

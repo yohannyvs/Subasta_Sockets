@@ -63,7 +63,7 @@
      <string>Usuario</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="txt_nom">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -73,7 +73,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="txt_user">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -83,7 +83,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="txt_pass_r">
     <property name="geometry">
      <rect>
       <x>120</x>
